@@ -7,7 +7,7 @@ services:
     - deployml_network
 
   modelserver:
-    image: shanesoh/modelserver
+    image: jw/modelserver
     build: ./modelserver
     depends_on:
     - redis
@@ -27,7 +27,7 @@ services:
         - node.role == worker
 
   webserver:
-    image: shanesoh/webserver
+    image: jw/webserver
     build: ./webserver
     ports:
     - "80:80"
